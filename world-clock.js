@@ -54,7 +54,7 @@
 
 	//Use jquery to call the rest service to get the location data from the SP list
 	$.ajax({
-		url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/GetByTitle('" + locationsListName + "')/items?orderby=Country,Title&$select=ID,Title,Timezone,Country",
+		url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/GetByTitle('" + locationsListName + "')/items?$orderby=Country,Title&$select=ID,Title,Timezone,Country",
 		type: "GET",
 		dataType: "json",
 		headers: {
